@@ -1,0 +1,50 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* TYPOGRAPHY-PANEL */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+.panel  a {
+	text-decoration:none;
+}
+
+.panel  a:hover {
+	text-decoration:underline;
+}
+
+.panel p  {
+	line-height:22px;
+}
+
+.panel  h1,
+.panel  h2,
+.panel  h3{
+
+	// below H3 is illegible
+	font-family: 'FuturaStdLight', Arial, Helvetica, sans-serif;
+}
+
+
+.panel {
+
+	.font-weight-book {
+
+		font-family:'FuturaStdBook';
+	}
+
+	.font-weight-bold {
+		
+		font-family:'FuturaStdBold';
+	}
+
+	.font-weight-light {
+		
+		font-family:'FuturaStdLight';
+	}
+
+	.font-weight-medium {
+		
+		font-family:'FuturaStdMedium';
+	}
+
+}

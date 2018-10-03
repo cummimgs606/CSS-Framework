@@ -1,0 +1,191 @@
+@charset "utf-8";
+
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* FORMS */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+.form {
+	padding:15px;
+	width:500px;
+}
+
+.form-select {
+    display: inline-block;
+
+}
+
+
+.form-upload, .form-input, .form-label  {
+	display: block !important;
+}
+   
+
+.form-input, .form-select, .form-upload, .form-submit, .form-upload, .form-upload input, textarea {
+	margin-right: 16px;
+    margin-bottom: 24px;
+    
+}
+
+.form-input, .form-label, .form-select, .form-upload, .form-submit, textarea {
+	border-radius: 5px;
+}
+
+
+/*
+.form-select{
+	float:none;
+}
+*/
+
+
+
+
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* FORM INPUT */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+.form-input{
+	width:226px;
+	height: 34px;
+	background-color: white;
+    border: 2px inset;
+    padding-left: 8px;
+
+}
+
+
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* FORM LABEL */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+.form-label{
+	width: 180px;
+	float:left;
+	padding-bottom: 6px;
+}
+
+
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* FORM SELECT */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+@-moz-document url-prefix() {
+	.form-select select {
+		padding-top:5px;
+		
+	}
+}
+
+.form-select {
+  background:url("../images/icons/icon-22-arrow-down.png") no-repeat 196px;
+  width:226px;
+  height:34px;
+}
+
+select::-ms-expand {
+    display: none;
+}
+
+select:focus::-ms-value {
+ /* For IE10 and above to remove blue hightlight */
+ background-color: inherit;  
+ }
+
+.form-select select {
+	
+	width:226px;
+	height:34px;
+
+	line-height:1;
+	border 0;
+
+	padding:6px;
+	-webkit-appearance: none;
+
+	padding-left:5px;
+	-moz-appearance: none;
+    text-indent: 0.01px;
+    text-overflow: '';
+}
+
+.ie8 .form-select {
+   border:1px solid;
+}
+
+
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* FORM SUBMIT */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+input.form-submit {
+	width:226px;
+	border:1px solid;
+	height:34px;
+
+	padding-left:10px;
+	padding-right:45px;
+
+	background:url("../images/icons/icon-22-arrow-right.png") 196px center no-repeat;
+	text-align:left;
+}
+
+
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* TEXT AREA */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+textarea {
+	margin-top: 0px;
+	margin-right:0px;
+	margin-left:0px;
+	height: 100px; 
+	width: 226px;	
+	background-color: white;
+    border: 2px inset;
+}
+
+
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* UPLOAD */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+.form-upload {
+    width: 226px;
+    height: 34px;
+    background:url(../images/extra/upload-button.png);
+    overflow: hidden;
+}
+
+.form-upload input {
+    width: 226px !important;
+    height: 34px !important;
+    opacity: 0 !important;
+    overflow: hidden !important;
+}
+
+
+
+
+
+

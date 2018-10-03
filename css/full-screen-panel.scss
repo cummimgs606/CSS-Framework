@@ -1,0 +1,33 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* FULL-SCREEN-PANEL */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+@media screen and (min-width: 1440px) {
+
+	.panel {
+		
+	    padding-left: 64px;
+	    padding-right: 64px;
+	    padding-top: 48px;
+	    padding-bottom: 48px;
+	}
+
+	.panel.with-divider{
+		float:left;
+	}
+
+	.panel.with-divider:last-child {
+    	padding-bottom: 64px;
+	}
+}
+
+
+
+
+
+
+
+

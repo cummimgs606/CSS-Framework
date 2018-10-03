@@ -1,0 +1,47 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/*  MOBILE-BAR */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+@media screen and (max-width: 768px) {
+
+	.bar {
+		height:50px;
+	}
+	
+	.bar {
+		line-height: 50px;
+	}
+}
+
+@media all and (max-width: 500px) {
+	
+	.bar > .icon{
+		display:none;
+	}
+	
+	.bar > .icon.icon-close{
+		display:block;
+	}
+
+	// alow text and lists to overflow in the bar - used in footer.
+	
+	.bar.over-flow {
+
+		/*
+		overflow:auto;
+		height:auto;
+		line-height:normal;
+		padding-top:12px;
+		margin-bottom:0px
+		*/
+		overflow: auto;
+		height: auto;
+		line-height: normal;
+		padding-top: 12px;
+		margin-bottom: 0px;
+		padding-bottom: 12px;
+		padding-right: 12px;
+	}	
+}

@@ -1,0 +1,33 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* MOBILE-TYPOGRAPHY-ORBIT */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+
+@media screen and (min-width: 700px) {
+
+	.orbit-caption h4 {
+		font-size:36px;
+	}
+
+	.orbit-caption p {
+		font-size:20px;
+	}	
+}
+
+
+@media screen and (max-width: 699px) {
+
+	.orbit-caption h4 {
+		font-size:24px;
+		margin-bottom:8px;
+	}
+
+	.orbit-caption p {
+		font-size:16px;
+		margin:0px;
+	}	
+	
+}

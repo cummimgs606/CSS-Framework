@@ -1,0 +1,34 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* FONT-FACE */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+@mixin create-font-face($font-name, $font-directory){
+
+    @font-face {
+
+        font-family: $font-name;
+        src:url($font-directory+'.eot');
+        src:url($font-directory+'.eot?#iefix') format('embedded-opentype'),
+            url($font-directory+'.woff') format('woff'),
+            url($font-directory+'.ttf') format('truetype'),
+            url($font-directory+'.svg#'+$font-name) format('svg');
+    }
+}
+
+$server-media-store: 'http://mediastore.harveynash.com/styles/hncom/'; /*remote seerver */
+$server-local: '../'; /*local server */
+$server: $server-local;
+
+@include create-font-face('FuturaStdBook',      	$server + 'fonts/futura/futurastd-book');
+@include create-font-face('FuturaStdBold',      	$server + 'fonts/futura/futurastd-bold');
+@include create-font-face('FuturaStdLight',     	$server + 'fonts/futura/futurastd-light');
+@include create-font-face('FuturaStdMedium',    	$server + 'fonts/futura/futurastd-medium');
+
+@include create-font-face('Nanami-Thin',    		$server + 'fonts/nanami/Nanami-Thin');
+@include create-font-face('Nanami-ThinOblique',    	$server + 'fonts/nanami/Nanami-ThinOblique');
+@include create-font-face('Nanami-OutlineRegular', $server + 'fonts/nanami/Nanami-OutlineRegular');
+
+@include create-font-face('BlackTieLight',      '../fonts/black-tie/fonts/light/BlackTie-Light-webfont');
+

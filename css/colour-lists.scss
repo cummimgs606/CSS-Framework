@@ -1,0 +1,85 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* COLOUR-LISTS */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+@import "function-gradient";
+
+@mixin write-list-colours($colour-name, $start-colour, $end-colour,  $text-color, $varitation){
+
+	li{
+
+		border-left-color:lighten($start-colour, $varitation);
+		border-right-color:darken($end-colour, $varitation);
+		border-bottom-color:darken($end-colour, $varitation);
+
+		a {
+
+			@extend %#{$colour-name}-gradient-varient-0;
+			@extend  %#{$colour-name}-text-varient-0;
+		}
+
+		a:hover {
+		
+			@extend %#{$colour-name}-gradient-varient-2;
+			@extend  %#{$colour-name}-text-varient-2;
+		}
+	}
+
+	.active a {
+
+		@extend %#{$colour-name}-gradient-varient-1;
+		@extend  %#{$colour-name}-text-varient-1;
+	}
+}
+
+@mixin write-theme-list($colour-name, $start-colour, $end-colour,  $text-color, $varitation, $list-name){
+
+	/*------------------------------------*/
+	/* THEME-#{to-upper-case($list-name)} */ 
+	/*------------------------------------*/
+
+	.theme-#{$colour-name} ul.list-#{$list-name} {
+
+		@include write-list-colours($colour-name, $start-colour, $end-colour,  $text-color, $varitation);
+	}
+
+	.theme-#{$colour-name} .list-header{
+		border-top-color:lighten($start-colour, 10);
+		border-bottom-color:darken($end-colour, 20);
+		border-right-color:darken($end-colour, 10);
+	}
+	
+}
+
+
+@mixin write-theme-list-text($colour-name){
+
+	//EXTENDED -  outer block - .theme-#{$colour-name}{}
+
+	.theme-#{$colour-name}{
+
+		ul.list-text{
+			
+			@extend  %#{$colour-name}-text-varient-0;
+
+			li a {
+
+				@extend  %#{$colour-name}-text-varient-1;
+			}
+
+			li a:hover {
+
+				@extend  %#{$colour-name}-text-varient-2;
+			}
+		}
+	}
+}
+
+
+
+
+
+
+

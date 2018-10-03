@@ -1,0 +1,28 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/*  MOBILE-BAR */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+@media screen and (max-width: 699px) {
+	
+	.caption-text-centered ,
+	.caption-text-top-left,
+	.caption-text-top-right{
+		margin: 0px;
+		text-align: left;
+		padding:16px;
+		padding-bottom:32px;
+	}
+		
+		
+	.caption-background,	
+	p + .caption-background{
+		background:none;
+		padding: none;
+		line-height:0px;
+		box-shadow:none;
+	}
+
+}
+

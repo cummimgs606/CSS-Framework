@@ -1,0 +1,66 @@
+/* --------------------------------------- */
+/* --------------------------------------- */
+/* COLOUR-FORMS */
+/* --------------------------------------- */
+/* --------------------------------------- */
+
+.form {
+}
+
+/* --------------------------------------- */
+/* FORM	LABEL							   */
+/* --------------------------------------- */
+
+.form-label{
+	color: #2D2D2D;
+}
+
+/* --------------------------------------- */
+/* FORM	SELECT							   */
+/* --------------------------------------- */
+
+.form-select {
+	background-color:#AAA;
+	color:#FFF;
+}
+
+.form-select select {
+	background:transparent;
+	border-color:#999;
+	color:#FFF;
+}
+
+.form-select select option {
+   color:#333;
+   background-color:#FFF;
+}
+
+.ie9 .form-select select option {
+   color:#333;
+   background-color:#F3F3F3;
+}
+
+.ie9 .form-select {
+   background-color:#F3F3F3;
+   border: 1px solid #BBB;
+}
+
+.ie8 .form-select select option {
+   color:#333;
+   background-color:#F3F3F3;
+}
+
+.ie8 .form-select {
+   border-color:#BBB;
+   background-color:#F3F3F3;
+}
+
+/* --------------------------------------- */
+/* FORM	SUBMIT							   */
+/* --------------------------------------- */
+
+input.form-submit {	
+	color:#FFF;
+	border-color:#9f2020;
+	background-color:#bf3c3c;
+}

@@ -1,0 +1,115 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* TYPOGRAPHY-DOCUMENT*/
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+.document  a {
+	text-decoration:none;
+}
+
+.document  a:hover {
+	text-decoration:underline;
+}
+
+.document p {
+	line-height:22px;
+}
+
+
+.document h1,
+.document h2,
+.document h3,
+.document h4,
+.document h5,
+.document h6{
+	font-family:'FuturaStdLight', Arial, Helvetica, sans-serif;
+	font-smooth:always;
+	-webkit-font-smoothing:antialiased;	
+}
+
+
+.document .font-weight-book {
+
+	font-family:'FuturaStdBook';
+}
+
+.document .font-weight-bold {
+	
+	font-family:'FuturaStdBold';
+}
+
+.document .font-weight-light {
+	
+	font-family:'FuturaStdLight';
+}
+
+.document .font-weight-medium {
+	
+	font-family:'FuturaStdMedium';
+}
+
+
+
+
+
+
+.document h1 span {
+	line-height:56px;
+}
+
+.document h1 {
+	font-size:42px;
+	font-size:2.625rem;
+	font-weight:200;
+	margin-bottom:48px;
+}
+
+.document h2 {
+	font-size:36px;
+	font-size:2.0rem;
+	font-weight:200;
+	margin-top:16px;
+	margin-bottom:16px;
+}
+
+.document h3 {
+	font-size:24px;
+	font-size:1.5rem;
+	font-weight:200;
+	margin-top:16px;
+	margin-bottom:16px;
+}
+
+.document h4 {
+	font-size:18px;
+	font-size:1.125rem;
+	font-weight:200;
+	margin-top:16px;
+	margin-bottom:16px;
+}
+
+.document h5 {
+	font-size:14px;
+	font-size:1.00rem;
+	font-weight:200;
+	font-family:"Arial", Helvetica, sans-serif;
+	line-height:20px;
+	font-style:normal;
+	margin-top:16px;
+	margin-bottom:16px;
+}
+
+.document h6 {
+	font-size:12px;
+	font-weight:0.75rem;
+	font-weight:600;
+	margin-top:16px;
+	margin-bottom:16px;
+}
+
+.document ul  {
+	font-size:14px;
+	font-size:0.875rem;
+	font-weight:100;
+}

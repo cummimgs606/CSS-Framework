@@ -1,0 +1,35 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* FUNCTION GRADIENT */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+@function create-gradient($start-colour, $end-colour, $darken){
+
+	$result: null;
+	$start-colour:darken($start-colour,$darken);
+	$end-colour:darken($end-colour,$darken);
+
+	$result:append($result,	$start-colour);
+	$result:append($result,	-moz-linear-gradient(top,$start-colour 0%,$end-colour 100%));
+	$result:append($result,	-webkit-gradient(linear, left top, left bottom, color-stop(0%,$start-colour), color-stop(100%, $end-colour)));
+	$result:append($result,	-webkit-linear-gradient(top, $start-colour 0%, $end-colour 100%));
+	$result:append($result,	-o-linear-gradient(top, $start-colour 0%, $end-colour 100%));	
+	$result:append($result,	-ms-linear-gradient(top, $start-colour 0%, $end-colour 100%));
+	$result:append($result,	linear-gradient(to bottom, $start-colour 0%, $end-colour 100%));
+	$result:append($result,	unquote("progid:DXImageTransform.Microsoft.gradient(startColorstr='"+$start-colour+"',endColorstr='"+$end-colour+"',GradientType=0)"));
+
+	@return $result;
+};
+
+@mixin write-gradient($result){
+
+	$length:length($result);
+
+	@for $i from 1 through $length - 1 {
+
+	  background:nth($result, $i);
+	}
+
+	filter:nth($result, $length);
+}

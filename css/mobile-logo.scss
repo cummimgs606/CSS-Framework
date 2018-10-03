@@ -1,0 +1,62 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* MOBILE-LOGO */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+@media screen and (max-width: 996px) {
+	
+	/*.logo{ margin-left:20px;} commented out for global fluid design*/
+}
+
+@media all and (max-width: 900px) {
+
+	.logo{
+		float:left;
+		margin-top:16px;
+		margin-left:16px;
+	}
+
+
+	.logo-alumni {
+		background-image: url("../images/logo/logo-alumni-mobile-182x48.png");
+		height: 48px;
+		width: 182px; 
+	}
+
+	.logo-aspire {
+		background-image: url("../images/logo/logo-aspire-mobile-86x48.png");
+		height: 48px;
+		width: 86px; 
+	}
+
+
+	.logo-engage{
+		background-image: url("../images/logo/logo-engage-mobile-123x48.png");
+		height: 48px;
+		width: 123px; 
+	}
+
+
+	.logo-harvey-nash{
+		background-image:url("../images/logo/logo-harvey-nash-mobile-83x48.png");
+		height: 48px;
+		width:83px;
+	}	
+
+	.logo-inspire{
+		background-image:url("../images/logo/logo-inspire-mobile-117x48.png");
+		height: 48px;
+		width:118px;
+	}
+
+	.logo-wpd {
+		background-image:url("../images/logo/logo-wpd-mobile-96x48.png");
+	  	height: 48px;
+		width: 96px;
+	}
+
+	.logo-text{
+		display:block;
+	}
+}

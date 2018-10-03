@@ -1,0 +1,104 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* LOGO */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+.logo {
+	float:left;
+	margin-top:26px;
+	margin-left:26px;
+	/*margin-left:none; commented for global fluid style*/
+	background-repeat: no-repeat;
+}
+
+.logo-alumni {
+	background-image: url("../images/logo/logo-alumni-main-284x75.png");
+	height: 75px;
+	width: 284px; 
+}
+
+.logo-aspire {
+	background-image: url("../images/logo/logo-aspire-main-256x75.png");
+	height: 75px;
+	width: 256px; 
+}
+
+.logo-engage{
+	background-image: url("../images/logo/logo-engage-main-280x75.png");
+	height: 75px;
+	width: 280px; 
+}
+
+.logo-harvey-nash {
+	background-image:url("../images/logo/logo-harvey-nash-main-110x75.png");
+	height:75px;
+	width: 110px;
+}
+
+.logo-inspire {
+	background-image:url("../images/logo/logo-inspire-main-327x75.png");
+	height:75px;
+	width: 327px;
+}
+
+.logo-wpd {
+	background-image:url("../images/logo/logo-wpd-main-279x75.png");
+	height:75px;
+	width: 279px;
+}
+
+
+/* ----------------------------------------------------- */
+/* LOGO-TEXT */
+/* ----------------------------------------------------- */
+
+.logo-text {
+	float:left;
+	padding-left:16px;
+	font-weight:700;
+	display:none;
+}
+
+
+.logo-alumni + .logo-text {
+  line-height: 89px; 
+}
+
+.logo-aspire + .logo-text {
+	line-height:92px;
+}
+
+.logo-engage + .logo-text {
+	line-height: 92px; 
+}
+
+.logo-harvey-nash + .logo-text {
+	line-height:80px;
+}
+
+.logo-inspire + .logo-text {
+	line-height:92px;
+}
+
+.logo-wpd + .logo-text {
+	line-height:80px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

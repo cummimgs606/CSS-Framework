@@ -1,0 +1,32 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* MOBILE HERO-TEXT */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+@media screen and (max-width: 996px) {
+
+	.hero-banner.flex-centered-vertical{
+
+		display: block;
+	}
+
+	.hero-banner {
+
+		.image-button {
+
+			float: none;
+		}	
+	}
+	
+	.hero-banner-text {
+		position: relative;
+	}
+
+	.theme-black.hero-banner-text {
+    	background: rgba(0, 0, 0, 1);
+	}
+}	
+
+

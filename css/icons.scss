@@ -1,0 +1,141 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* ICONS */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+// AUTHOR 	:Mark Cummings
+// COMPANY	:Harvey Nash
+// TITLE	:Icons
+// USAGE	:Create css sprite list for icon sprite sheet
+// CALL 	:@include create-icons(type:Number);
+//
+// The input parameter will relate to the sprite sheet dimensions. 
+// The sprite sheet should have a 2px margin for each sprite.
+// Sprite sheet icons go from left to right - $icon-names.
+// Sprite sheet color themes go from top to bottom - $theme-names.
+// The current directory for placing images is - '../images/icons/icons-XX.png'; 
+// to Change the image path refer to - $image-path;
+
+
+$icon-names:"icon-arrowRight"
+			"icon-arrowLeft"
+			"icon-arrowUp"
+			"icon-arrowDown"
+			"icon-search"
+			"icon-close"
+			"icon-show"
+			"icon-downLoad"
+			"icon-upLoad"
+			"icon-notice"	
+			"icon-phone"	
+			"icon-world"	
+			"icon-twitter"
+			"icon-facebook"
+			"icon-linkedin"
+			"icon-youtube"
+			"icon-toggle-on"
+			"icon-toggle-off"
+			"icon-map-pin"
+			"icon-xing"
+			"icon-email";
+
+
+$theme-names:"theme-white"
+			 "theme-grey"
+			 "theme-red"
+			 "theme-black";
+
+
+
+@mixin resize-icon($icon-size, $margin-size) {
+
+	.icon {
+		float:right;
+		margin-top:#{$margin-size}px;
+		margin-bottom:#{$margin-size}px;
+		margin-right:10px;
+		width:#{$icon-size}px; 
+		height:#{$icon-size}px;
+	}
+}
+
+
+@mixin resize-sprites($icon-size) {
+
+	$postion-x:0;
+	$postion-y:0;
+
+	$sprite-width:$icon-size;
+	$sprite-height:$icon-size;
+
+	$image-path:'../images/icons/icons-'+ $icon-size +'px.png';
+
+	@each $theme in $theme-names{
+
+		$postion-x:0;
+
+		@each $icon in $icon-names {
+
+			.#{$theme} .#{$icon} {
+
+				background: url($image-path) no-repeat #{- $postion-x}px #{- $postion-y}px;
+				$postion-x: $postion-x + $sprite-width;
+	  		}
+		}
+
+		$postion-y: $postion-y + $sprite-height;
+	}
+}
+
+
+@mixin orbit-icons($icon-size) {
+
+	$postion-x:0;
+	$postion-y:0;
+
+	$sprite-width:$icon-size;
+	$sprite-height:$icon-size;
+
+	$image-path:'../images/icons/icons-'+ $icon-size +'px.png';
+
+	@each $theme in $theme-names {
+
+		$postion-x:0;
+
+		@each $icon in $icon-names {
+
+
+				@if $icon == "icon-toggle-on" {
+
+					ul.orbit-bullets.#{$theme} li {
+						background:none;
+						background: url($image-path) no-repeat #{- $postion-x}px #{- $postion-y}px;
+					}
+				}
+
+				@if $icon == "icon-toggle-off" {
+
+					ul.orbit-bullets.#{$theme} li.active {
+						background:none;
+						background: url($image-path) no-repeat #{- $postion-x}px #{- $postion-y}px;
+					}
+				}
+
+			$postion-x: $postion-x + $sprite-width;
+
+		}
+
+		$postion-y: $postion-y + $sprite-height;
+	}
+}
+
+
+@mixin create-icons($icon-size,$margin-size) {
+
+	@include resize-icon($icon-size, $margin-size);
+	@include resize-sprites($icon-size);
+	@include orbit-icons($icon-size);
+}
+

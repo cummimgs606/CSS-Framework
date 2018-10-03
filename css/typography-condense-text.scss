@@ -1,0 +1,38 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/*  TYPOGRAPHY-CONDENSE-TEXT */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+.condense-text {
+	margin:0px;
+}
+
+.condense-text > p,
+.condense-text > h1,
+.condense-text > h2,
+.condense-text > h3,
+.condense-text > h4,
+.condense-text > h5,
+.condense-text > h6
+{ 
+	margin:0px;
+	line-height: 1.2em
+}
+
+
+.condense-text > p {
+	line-height: 18px;
+    margin-bottom: 6px;
+}
+
+.condense-text > p {  
+
+	word-break: break-all;
+    word-break: break-word;
+    -webkit-hyphens: auto;
+    -moz-hyphens: auto;
+    -ms-hyphens: auto;
+    hyphens: auto;          
+}

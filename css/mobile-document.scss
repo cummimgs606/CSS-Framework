@@ -1,0 +1,21 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/*  MOBILE-DOCUMENT */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+@media screen and (max-width: 600px) {
+	
+	.document {
+		padding-left:16px;
+		padding-right: 16px;
+		padding-top: 32px;
+		padding-bottom: 32px;
+	}
+
+	.document-text-centered  {
+		text-align: center;
+    	margin-left: 32px;
+    	margin-right: 32px;
+	}
+}

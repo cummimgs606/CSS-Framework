@@ -1,0 +1,24 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* TYPOGRAPHY-DOCUMENT-TITLE */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+.document-title h1,
+.document-title h2 {
+	font-family:'FuturaStdLight', Arial, Helvetica, sans-serif;
+	font-smooth:always;
+	-webkit-font-smoothing: antialiased;	
+}
+
+.document-title h1 {
+	font-size:42px;
+	font-size:2.625rem;
+	font-weight:200;
+    margin-bottom: 0px;
+}
+
+.document-title h1 span {
+	line-height:56px;
+}

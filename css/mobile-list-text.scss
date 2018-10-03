@@ -1,0 +1,44 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/*  MOBILE-LIST-TEXT */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+@media all and (max-width: 768px) {
+
+	ul.list-text {
+		height: 50px;
+	}
+}
+
+
+@media all and (max-width: 680px) {
+	
+	ul.list-text  {
+		padding-left:16px;
+		margin-left:-16px;
+		height:auto;
+		width:100%;
+		padding-bottom:12px;
+		padding-top:12px;
+	}
+	
+	ul.list-text li p {
+		line-height:20px;
+	}
+	
+	ul.list-text.right{
+		float:left;
+	}
+}
+
+@media all and (max-width: 500px) {
+	
+	ul.list-text li {
+		float: none;
+		border-left: none;
+		padding-left: 0px;
+		padding-right: 8px;
+	}
+}

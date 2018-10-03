@@ -1,0 +1,41 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/*  MOBILE-TYPOGRAPHY-DOCUMENT */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+@media screen and (max-width: 900px) {
+
+	.document h3 {
+		
+		font-size:1.7rem;
+
+
+		/*
+
+		font-family: 'FuturaStdLight';
+		font-size:32px;
+		font-weight:200;
+		line-height:42px;
+		*/
+	}
+	
+	.document h4 {
+
+		font-family: 'FuturaStdMedium';
+		/*font-size:24px;*/
+		/*font-weight:200;*/
+		
+		a {
+			font-family: 'FuturaStdMedium';
+			font-size:24px;
+			font-weight:200;
+		}
+	}
+
+	.document ul  {
+		
+		font-size:18px;
+	}
+}

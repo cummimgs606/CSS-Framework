@@ -1,0 +1,60 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* TYPOGRAPHY-LISTS */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+ul.list-horizontal li p {
+	font-family:Arial, "Helvetica", sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	line-height: 39px;
+	margin-bottom: 0px;
+}
+
+/* -------------------------------- */
+
+ul.list-icons li p {
+	font-family:Arial, "Helvetica", sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	line-height: 12px;
+	margin-bottom: 0px;
+	line-height: 40px;
+	padding-right:16px;
+}
+
+/* -------------------------------- */
+
+ul.list-text li p  {
+	font-family:Arial, "Helvetica", sans-serif;
+	font-size:12px;
+	font-weight:bold;
+	line-height: 12px;
+	margin-bottom: 0px;
+}
+
+ul.list-text li a:hover {
+	text-decoration:none;
+}
+
+ul.list-text li a:active {
+	text-decoration:none;
+}
+
+/* -------------------------------- */
+
+ul.list-vertical {
+	font-family:Arial, "Helvetica", sans-serif;
+	font-size:14px;
+	font-weight:200;
+}
+
+ul.list-vertical li p {
+	padding-left:16px;
+	padding-right:16px;
+	margin-bottom:0px;
+	padding-top:12px;
+	padding-bottom:12px;
+}

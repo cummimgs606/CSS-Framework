@@ -1,0 +1,366 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* COLOUR-THEMES */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+@import "function-gradient";
+
+@mixin write-theme-palette($colour-name, $start-colour, $end-colour, $text-color, $link-color, $variation){
+
+	/*------------------------------------*/
+	/* THEME-#{to-upper-case($colour-name)} BAR */ 
+	/*------------------------------------*/
+
+	.theme-#{$colour-name}.colour-start {
+			
+ 		background:$start-colour ;
+	}
+	
+	.theme-#{$colour-name}.colour-start {
+			
+ 		background:$start-colour ;
+	}
+
+	.theme-#{$colour-name}.colour-end {
+		background:$end-colour ;
+	}
+
+	.theme-#{$colour-name}.colour-normal {@extend %#{$colour-name}-gradient-varient-0;}
+	
+
+	.theme-#{$colour-name}.colour-hover {@extend %#{$colour-name}-gradient-varient-1};
+	
+
+	.theme-#{$colour-name}.colour-active {@extend %#{$colour-name}-gradient-varient-2};
+
+
+	
+
+		//a .bar {
+
+			//border-bottom:1px solid darken($end-colour, $variation);
+			//@extend %#{$colour-name}-gradient-varient-0;	
+			//@extend  %#{$colour-name}-text-varient-0;
+		//}
+
+		//a:hover .bar {
+
+			//border-bottom:1px solid darken($end-colour, $variation);
+
+			//@extend %#{$colour-name}-gradient-varient-1;
+			//@extend  %#{$colour-name}-text-varient-1;
+		//}
+
+		//a:active .bar {
+
+			//border-bottom:1px solid darken($end-colour, $variation);
+
+			//@extend %#{$colour-name}-gradient-varient-2;
+			//@extend  %#{$colour-name}-text-varient-2;
+		//}
+	
+}
+
+
+@mixin write-theme($colour-name, $start-colour, $end-colour,  $text-color, $link-color, $variation){
+
+	/*------------------------------------*/
+	/* THEME-#{to-upper-case($colour-name)} BAR */ 
+	/*------------------------------------*/
+	
+	.theme-#{$colour-name}{
+
+		@extend %#{$colour-name}-gradient-varient-0;
+		@extend  %#{$colour-name}-text-varient-0;
+
+		a {
+			color:$link-color
+		}
+
+		a:hover {
+			color:lighten($link-color,  $variation);
+		}
+	}
+}
+
+
+@mixin write-theme-bar($colour-name, $start-colour, $end-colour,  $text-color, $variation){
+
+	/*------------------------------------*/
+	/* THEME-#{to-upper-case($colour-name)} BAR */ 
+	/*------------------------------------*/
+
+	.theme-#{$colour-name}{
+
+		.bar {
+
+			border-bottom:1px solid darken($end-colour, $variation);
+
+			@extend %#{$colour-name}-gradient-varient-0;	
+			@extend  %#{$colour-name}-text-varient-0;
+		}
+
+		a .bar {
+
+			border-bottom:1px solid darken($end-colour, $variation);
+
+			@extend %#{$colour-name}-gradient-varient-0;	
+			@extend  %#{$colour-name}-text-varient-0;
+		}
+
+		a:hover .bar {
+
+			border-bottom:1px solid darken($end-colour, $variation);
+
+			@extend %#{$colour-name}-gradient-varient-1;
+			@extend  %#{$colour-name}-text-varient-1;
+		}
+
+		a:active .bar {
+
+			border-bottom:1px solid darken($end-colour, $variation);
+
+			@extend %#{$colour-name}-gradient-varient-2;
+			@extend  %#{$colour-name}-text-varient-2;
+		}
+	}
+}
+
+
+@mixin write-theme-body($colour-name, $start-colour, $end-colour){
+
+	body.background-theme-#{$colour-name}{
+
+		background:$end-colour;
+
+		.content{
+
+			@extend %#{$colour-name}-gradient-varient-0;
+		}
+	}
+}
+
+
+@mixin write-theme-column($colour-name, $start-colour, $end-colour,  $variation){
+
+	/*------------------------------------*/
+	/* THEME-#{to-upper-case($colour-name)} COLUMN */ 
+	/*------------------------------------*/
+
+	.theme-#{$colour-name} div[class*="column-"]{
+
+		//border-left-color:#FF0000;
+		//border-right-color:#00FF00;
+
+		border-left-color:lighten($start-colour, $variation);
+		border-right-color:darken($end-colour, $variation / 2);
+
+
+
+	}
+
+	div[class*="column-"].theme-#{$colour-name} {
+
+		//border-left-color:#00FFFF;
+		//border-right-color:#FF00FF;
+
+		border-left-color:lighten($start-colour, $variation);
+		border-right-color:darken($end-colour, $variation / 2);
+
+
+	}
+	
+	.theme-#{$colour-name} div[class*="column-"].border-none {
+
+		border:none;
+	}
+
+	div[class*="column-"].theme-#{$colour-name}.border-none  {
+
+		border:none;
+	}
+}
+
+
+@mixin write-theme-document-title($colour-name, $start-colour, $end-colour,  $variation){
+
+	/*------------------------------------*/
+	/* THEME-#{to-upper-case($colour-name)} DOCUMENT TITLE */
+	/*------------------------------------*/
+
+	.theme-#{$colour-name} .document-title{
+
+		border-top:1px solid darken($start-colour,  $variation);
+		border-bottom:1px solid darken($end-colour,  $variation);
+
+	}
+}
+
+
+@mixin write-theme-orbit-caption($colour-name, $start-colour){
+
+ 	.theme-#{$colour-name}{
+
+ 		.orbit-caption{
+
+ 			background:$start-colour ;
+			background: rgba( $start-colour, 0.8 );
+
+ 		}
+ 	}
+}
+
+
+@mixin write-theme-exceptions($colour-name, $end-colour){
+
+	.theme-#{$colour-name}{
+
+		.table-wrapper{
+
+			.column-9:last-child, .column-8:first-child, .column-7:first-child, .column-12 + .column-6{
+
+				border-right:1px solid darken($end-colour,10%);
+			}
+		}
+	}
+}
+
+
+@mixin write-theme-icon-image ($colour-name, $background-colour, $end-colour, $text-color){
+
+	/*------------------------------------*/
+	/* THEME-#{to-upper-case($colour-name)} DOCUMENT TITLE */
+	/*------------------------------------*/
+
+	.theme-#{$colour-name} .icon-image {
+
+		background-color: $background-colour;
+		border-color: $end-colour;
+		color: $text-color;
+	}
+
+	.theme-#{$colour-name} .icon-image.background-none{
+      background-color:rgba(0,0,0,0);
+	}
+}
+
+@mixin write-theme-hero-banner-text ($colour-name, $background-colour,  $text-color){
+
+	/*------------------------------------*/
+	/* THEME-#{to-upper-case($colour-name)} DOCUMENT TITLE */
+	/*------------------------------------*/
+
+	.theme-#{$colour-name}.hero-banner-text {
+
+		/*background-color: $background-colour;*/
+		background:rgba( darken(saturate($background-colour, 60%), 20%), 0.6 );
+
+
+
+		
+	}
+}
+
+
+@mixin create-theme($colour-name, $start-colour, $end-colour,  $text-color, $link-color, $variation){
+	
+	%#{$colour-name}-gradient-varient-0{
+
+		$result:create-gradient($start-colour, $end-colour, 0%);
+		@include write-gradient($result);
+	}
+
+	%#{$colour-name}-gradient-varient-1{
+
+		$result:create-gradient($start-colour, $end-colour, $variation);
+		@include write-gradient($result);
+	}
+
+	%#{$colour-name}-gradient-varient-2{
+
+		$result:create-gradient($start-colour, $end-colour, $variation / 2);
+		@include write-gradient($result);
+	}
+
+
+	%#{$colour-name}-text-varient-0{
+		color:rgba( $text-color, 0.9 )
+	}
+
+	%#{$colour-name}-text-varient-1{
+		color:rgba( $text-color, 0.8)
+	}
+
+	%#{$colour-name}-text-varient-2{
+		color:rgba( $text-color, 1 )
+	}
+
+	@include write-theme 					($colour-name, $start-colour, $end-colour, $text-color, $link-color, $variation);
+	@include write-theme-bar				($colour-name, $start-colour, $end-colour, $text-color, $variation);
+	@include write-theme-column				($colour-name, $start-colour, $end-colour, $variation);
+	@include write-theme-document-title		($colour-name, $start-colour, $end-colour, $variation);
+	@include write-theme-exceptions     	($colour-name, $end-colour);
+	@include write-theme-list-text			($colour-name);
+	@include write-theme-hero-banner-text 	($colour-name, $start-colour,  $text-color);
+
+	@include write-theme-palette 			($colour-name, $start-colour, $end-colour, $text-color, $link-color, $variation);
+}
+
+
+@include write-theme-icon-image		("white",	#FEFEFE, #999999, #000000);
+@include write-theme-icon-image		("black", 	#333333, #000000, #999999);
+@include write-theme-icon-image 	("grey", 	#666666, #000000, #EEEEEE);
+@include write-theme-icon-image		("red", 	#FFFFFF, #770000, #770000);
+@include write-theme-icon-image		("aqua", 	#FFFFFF, #2E6077, #2E6077);
+@include write-theme-icon-image		("blue", 	#FFFFFF, #000732, #000732);
+
+@include write-theme-body			("white", 	#FFFFFF, #EFEFEF);
+@include write-theme-body			("grey", 	#444444, #292929);
+@include write-theme-body			("black", 	#2C2C2C, #000000);
+
+
+@include create-theme				("white", 	#FFFFFF, #EFEFEF, #333, 	#700, 16%);
+@include create-theme				("grey", 	#393939, #292929, #BBB, 	#EEE, 8%);
+@include create-theme				("black", 	#2C2C2C, #000000, #BBB, 	#DDD, 8%);
+@include create-theme				("red", 	#BF3C3C, #9F2020, #EEE, 	#FFF, 8%);
+@include create-theme				("blue", 	#003A65, #001F35, #C4D4E1, 	#FFF, 8%);
+@include create-theme				("aqua", 	#7AACC3, #6D98AB, #FFF, 	#214251, 8%);
+
+
+@include write-theme-list			("white",	#FFFFFF, #EFEFEF, #111, 8%, 	"horizontal");
+@include write-theme-list			("black", 	#2C2C2C, #000000, #333, 8%, 	"horizontal");
+@include write-theme-list 			("grey", 	#393939, #292929, #BBB, 8%, 	"horizontal");
+@include write-theme-list			("red", 	#BF3C3C, #9F2020, #FFF, 8%, 	"horizontal");
+@include write-theme-list			("aqua", 	#7AACC3, #6D98AB, #FFF, 15%,	"horizontal");
+@include write-theme-list			("blue", 	#003A65, #001F35, #FFF, 8%, 	"horizontal");
+
+@include write-theme-list			("white",	#FDFDFD, #EFEFEF, #333, 8%, 	"vertical");
+
+
+
+.hero-banner-text.theme-background-black {
+	color: #FFFFFF;
+	background: rgba(5, 5, 5, 0.5);
+}
+
+
+/*
+@include write-theme-orbit-caption	("white", 	#FFFFFF);
+@include write-theme-orbit-caption	("grey", 	#3B3B3B);
+@include write-theme-orbit-caption	("black", 	#2C2C2C);
+@include write-theme-orbit-caption	("red", 	#CC0000);
+@include write-theme-orbit-caption	("blue", 	#001F36);
+*/
+
+
+
+
+
+
+.theme-pattern {
+
+	background-image: url('../images/extra/pattern-1.png');
+	background-repeat: repeat-x repeat-y;
+}
+

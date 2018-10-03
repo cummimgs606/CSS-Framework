@@ -1,0 +1,217 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* LISTS*/
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+.document ul, .panel ul, .panel ol{
+
+	font-family:Arial, "Helvetica", sans-serif;
+	font-size:14px;
+
+	margin:0px;
+	padding:0px;
+	padding-left:16px;
+	padding-bottom:16px;
+	
+
+	li {
+		line-height:24px;
+	}
+}
+
+.document ul, .panel ul{
+	list-style-type:disc;
+
+	
+}
+
+ul.list-text-centered {
+	list-style-position: inside;
+}
+
+
+
+
+/* ----------------------------------------------------- */
+/* LIST HEADER	*/
+/* ----------------------------------------------------- */
+
+.list-header{
+	margin-top:36px;
+	margin-right: 26px;
+	height:40px;
+	float:right;
+
+	border-top-width:1px;
+	border-top-style:solid;
+
+	border-bottom-width:1px;
+	border-bottom-style:solid;
+
+	border-right-style:solid;
+	border-right-width:1px;
+}
+
+/* ----------------------------------------------------- */
+/* LIST HORIZONTAL */
+/* ----------------------------------------------------- */
+
+
+ul.list-horizontal {
+	float:right;
+	margin:0;
+	padding:0;	
+	height:39px;
+
+	li {
+
+		display:inline;
+		float:left;
+		list-style-type:none;
+
+		border-left-width:1px;
+		border-left-style:solid;
+
+		border-right-style:solid;
+		border-right-width:1px;
+
+		a {
+			display:block;	
+			padding-left:16px;
+			padding-right:16px;
+		}
+
+		a:hover{
+			text-decoration: none;
+		}
+	}
+
+	li:last-child{
+		border-right:none;
+	}
+
+
+}
+
+
+
+ul.list-horizontal * > .icon {
+	margin-top:9px;
+	margin-left:9px;
+	margin-right:-6px;
+	margin-bottom:9px;
+}
+
+
+/* ----------------------------------------------------- */
+/* LIST VERTICAL */
+/* ----------------------------------------------------- */
+
+
+ul.list-vertical {
+	margin:0px;
+	padding:0;
+	list-style-type:none;
+
+	li {
+		
+		border-bottom-width:1px;
+		border-bottom-style:solid;
+
+		a {
+			display:block;
+		}
+
+		a:hover{
+			text-decoration: none;
+		}
+	}
+}
+
+
+/* ----------------------------------------------------- */
+/* LIST ICONS */
+/* ----------------------------------------------------- */
+
+ul.list-icons  {
+	float:left;
+	margin:0;
+	padding:0;	
+	list-style-type:none;
+
+	li {
+		float:left;
+	}
+}
+
+ul.list-icons.left{
+	float:left;
+}
+
+ul.list-icons.right{
+	float:right;
+}
+
+
+/* ----------------------------------------------------- */
+/* LIST TEXT */
+/* ----------------------------------------------------- */
+
+ul.list-text  {
+
+	list-style-type:none;
+	margin: 0px;
+	padding-left:0px;
+	padding-right:0px;
+	padding-top: 14px;
+	height:40px;
+
+	li {
+		float:left;
+		border-left:1px solid;
+		padding-left:8px;
+		padding-right:8px;
+	}
+
+	li:first-child{
+		border-left:none;
+		padding-left:0px;
+	}
+
+
+}
+
+ul.list-text.left{
+
+	float:left;
+}
+
+ul.list-text.right{
+
+	float:right;
+}
+
+/* ----------------------------------------------------- */
+/* LIST USP */
+/* ----------------------------------------------------- */
+
+ul.list-usp  {
+		list-style-type:none;
+		padding-bottom:16px;
+	}
+	
+	.list-usp li {
+		float:none;
+	}
+	
+	.list-usp li h3 {
+		display: inline-block;
+		padding-left:8px;
+		position: relative;
+    	top: -4px;
+	}
+
+
+
+

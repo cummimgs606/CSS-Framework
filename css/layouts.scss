@@ -1,0 +1,244 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* LAYOUT */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+
+/* ----------------------------------------------------- */
+/* ROW 	COLUNM TABLE-WRAPPER FIXED-HEIGHT */
+/* ----------------------------------------------------- */
+
+$columns-max:12;
+
+@mixin create-borders(){
+
+	%border-style {
+		border-left-width:1px;
+		border-left-style:solid;
+		border-right-width:1px;
+		border-right-style:solid;
+	}
+
+	%border-none {
+		border:none;
+	}
+
+	%border-left-none {
+		border-left:none;
+	}
+
+	%border-right-none {
+		
+		border-right:none;
+	}
+	
+
+	@for $i from 1 through $columns-max {
+
+		.column-#{$i}{
+
+			@extend %border-style ;
+		}
+
+		.column-#{$i}:first-child{
+
+			@extend %border-left-none;
+	 	}
+
+		.column-#{$i}:last-child{
+
+			@extend %border-right-none;
+	 	}
+
+		.table-wrapper{
+
+			.column-#{$i}{
+
+				@extend %border-none;
+			}
+		}
+	}
+}
+
+
+@mixin create-column-span($column-names){
+
+	$column-unit: 1 / $columns-max;
+
+	@for $i from 1 through $columns-max {
+
+		$toggle:0;
+
+		@each $name in $column-names {
+
+			@if $name == $i {
+    			$toggle:1;
+  			} 
+		}
+		
+		@if $toggle == 0{
+
+	  		.column-#{$i} { 
+	  			width: percentage($column-unit * $i); 
+	  			display: table-cell; 
+				float:none;
+	  		}
+	  	}
+
+		@if $toggle == 1{
+
+	  		.column-#{$i} { 
+				width:100%;
+				float: left;
+				height:100%;
+			}
+		}
+	}
+}
+
+
+@mixin create-fix-height($rows, $height){
+
+	$rows-unit:$rows * $height;
+
+	@for $i from 1 through $rows {
+  		.fixed-height-#{$height * $i} { 
+  			height:#{$height * $i}px;
+  		}
+	}
+}
+
+
+/* ----------------------------------------------------- */
+/* ROW */
+/* ----------------------------------------------------- */
+
+
+.row{
+	margin-left:auto;
+    margin-right:auto; 
+    width:100%;
+	//height:100%; /*** SAFARI ERROR ****/
+	/*width:960px;* commented out to make design globaly fluid*/
+	display:table;
+}
+
+
+/* ----------------------------------------------------- */
+/* COLUMN AND (LEFT-RIGHT FOR USE WITH 'table-wrapper') */
+/* ----------------------------------------------------- */
+
+
+div[class*="column-"].right{
+	float:right;
+}
+
+div[class*="column-"].left{
+	float:left;
+}
+
+div[class*="column-"].column-text-centered{
+	text-align:center;
+}
+
+
+/* ----------------------------------------------------- */
+/* TABLE WRAPPER */
+/* ----------------------------------------------------- */
+
+
+.table-wrapper{
+	display:table;
+}
+
+
+/* ----------------------------------------------------- */
+/* MAKE BREAK POINTS IN COLUMN AND FIXED HEIGHTS */
+/* ----------------------------------------------------- */
+
+@include create-fix-height(12, 50);
+@include create-column-span(0);
+@include create-borders();
+
+$break-0-max:960px;
+$break-1-max:900px;
+$break-2-max:700px;
+$break-3-max:640px;
+$break-4-max:560px;
+$break-5-max:500px;
+$break-6-max:240px;
+
+$break-0-min:1440px;
+$break-1-min:$break-2-max;
+$break-2-min:$break-3-max;
+$break-3-min:$break-4-max;
+$break-4-min:$break-5-max;
+$break-5-min:$break-6-max;
+
+/* ----------------------------------------------------- */
+/* BREAK ROW AND FIXED HEIGHT */																			
+/* ----------------------------------------------------- */
+
+@media screen 	and (min-width: $break-0-min) {
+	.row{
+		width:100%;
+	}
+}
+
+/* ----------------------------------------------------- */
+/* BREAK ROW AND FIXED HEIGHT */																			
+/* ----------------------------------------------------- */
+
+@media screen 	and (min-width: $break-5-min) 
+				and (max-width: $break-0-max) {
+	.row{
+		width:100%;
+	}
+
+	div[class*="fixed-height-"]{
+		height:auto;
+	}
+}
+
+
+/* ----------------------------------------------------- */
+/* BREAK COLUMNS */																			
+/* ----------------------------------------------------- */
+
+
+@media screen 	and (min-width: $break-1-min) 
+			  	and (max-width: $break-0-max) {
+
+	@include create-column-span(1 2 5 7 10 11);
+}
+
+@media screen 	and (min-width: $break-2-min) 
+				and (max-width: $break-2-max) {
+
+	@include create-column-span(1 2 3 5 7 9 10 11);
+}
+
+@media screen 	and (min-width: $break-3-min) 
+				and (max-width: $break-3-max) {
+
+	@include create-column-span(1 2 3 4 5 7 8 9 10 11);
+}
+
+@media screen 	and (min-width: $break-5-min) 
+				and (max-width: $break-4-max) {
+
+	@include create-column-span(1 2 3 4 5 6 7 8 9 10 11 12);
+}
+
+@media screen 	and (min-width:$break-5-min) 
+				and (max-width:$break-5-max) {
+
+	div[class*="column-"].div[class*="theme-"]{
+		border:none;
+	}
+}
+
+
+
+

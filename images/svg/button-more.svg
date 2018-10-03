@@ -1,0 +1,45 @@
+
+
+<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32">
+
+<style>
+
+/* button-more.svg*/
+
+
+.more-button {
+    cursor: pointer;
+}
+
+.more-button:hover .circle {
+  fill: #777777;
+}
+
+.more-button:hover #arrow {
+  stroke: #EEEEEE;
+}
+
+.more-button path {transition: 200ms;
+	transition-timing-function: ease-in-out;
+	-webkit-transition: 200ms;
+	-webkit-transition-timing-function: ease-in-out;
+}
+
+</style>
+
+	<g class="more-button">
+	
+		<rect width="32" height="32" style="fill:rgb(0,0,0);fill-opacity:0" />
+	
+		<path class="circle" stroke="#666666" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none" d="
+	M 31 16
+	Q 31 22.25 26.6 26.6 26.4 26.85 26.15 27.05 21.95 31 16 31 12.4 31 9.45 29.55 7.25 28.45 5.4 26.6 4.2 25.4 3.35 24.15 2.4 22.7 1.85 21.05 1 18.7 1 16 1 13.3 1.85 10.95 2.4 9.3 3.35 7.9 4.2 6.6 5.4 5.4 9.75 1 16 1 22.25 1 26.6 5.4 31 9.75 31 16 Z"/>
+	
+		<path id="arrow" stroke="#666666" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" fill="none" d="
+		M 13.85 9.75
+		L 20.15 16 13.85 22.3"/>
+	</g>
+
+
+
+</svg>

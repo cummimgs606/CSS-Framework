@@ -1,0 +1,32 @@
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* PANEL */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+
+.panel {
+	
+	padding-left:16px;
+	padding-right:16px;
+	padding-top:20px;
+	padding-bottom:16px;
+}
+
+
+.panel.with-divider:first-child{
+	border-top:none;
+	padding-top:0px;
+}
+
+.panel.with-divider{
+	border-bottom:1px solid #CCCCCC;
+	padding-top:48px;
+	padding-bottom:32px;
+	padding-left:0px;
+	padding-right:0px;
+}
+
+.panel.with-divider:last-child{
+	border-bottom:none;
+	padding-bottom:0px;
+}

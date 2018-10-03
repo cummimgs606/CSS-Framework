@@ -1,0 +1,23 @@
+/* ----------------------------------------------------- */
+/* OVERWRITE-ORBIT */
+/* ----------------------------------------------------- */
+/* ----------------------------------------------------- */
+/* MOVE TITLE AND STRAP TO BOTTOM OF BANNER */
+/* ----------------------------------------------------- */
+ul.orbit-bullets li {
+  width: 22px;
+  height: 22px; }
+
+ul.orbit-bullets {
+  background: none; }
+
+#featured img {
+  width: 100%;
+  height: auto; }
+
+ul.orbit-bullets {
+  position: fixed;
+  top: 136px;
+  z-index: 3000; }
+
+/*# sourceMappingURL=orbit-over-write.css.map */
